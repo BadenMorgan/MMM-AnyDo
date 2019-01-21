@@ -1,10 +1,12 @@
-# MMM-Wunderlist
-This an extension for the [MagicMirror](https://github.com/MichMich/MagicMirror). It can display your Wunderlist todos. You can add multiple instances with different lists. Only one account supported. The enhanced version will allow you to have multiple groupings per List added.
+# MMM-AnyDo
+This an extension for the [MagicMirror](https://github.com/MichMich/MagicMirror). It can display your Any.do todos. You can add multiple instances with different lists. Only one account supported. The enhanced version will allow you to have multiple groupings per List added.
+
+This is forked from the excellent MMM-Wunderlist-Enhanced and modified for Any.do
 
 ![Alt text](/MMM-Wunderlist-Enhanced.png?raw=true "Groupings")
 
 ## Installation
-1. Navigate into your MagicMirror's `modules` folder and execute `git clone https://github.com/funsocietyirc/MMM-Wunderlist-Enhanced.git`. A new folder will appear navigate into it.
+1. Navigate into your MagicMirror's `modules` folder and execute `git clone https://github.com/MikeSandford/MMM-AnyDo.git`. A new folder will appear navigate into it.
 2. Execute `npm install` to install the node dependencies.
 
 ## Using the module
@@ -13,9 +15,9 @@ To use this module, add it to the modules array in the `config/config.js` file:
 ````javascript
 modules: [
 	{
-		module: 'MMM-Wunderlist-Enhanced',
+		module: 'MMM-AnyDo',
 		position: 'top_right',	// This can be any of the regions. Best results in left or right regions.
-		header: 'Wunderlist', // This is optional
+		header: 'AnyDo', // This is optional
 		config: {
 			// See 'Configuration options' for more information.
                         accessToken: "5f6f8b5972470536222ac5f0ab03230bbbcc5279f2aaa3c90f66db780bb1",  //example token
@@ -74,7 +76,7 @@ The following properties can be configured:
 		<tr>
 			<td><code>maximumEntries</code></td>
 			<td>Maximum number of todos to be shown per list.<br>
-				<br><b>Possible values:</b> <code>int</code> 
+				<br><b>Possible values:</b> <code>int</code>
 				<br><b>Default value:</b> <code>60</code>
 			</td>
 		</tr>
@@ -123,7 +125,7 @@ The following properties can be configured:
 		<tr>
 			<td><code>iconPosition</code></td>
 			<td>Where to position the star-icon and the (optional) bullet-icons<br>
-				<br><b>Possible values:</b> 
+				<br><b>Possible values:</b>
                 <ul>
                     <li><code>left</code> In a table column left of the title</li>
                     <li><code>right</code> In a table column right of the title</li>
@@ -145,14 +147,15 @@ The following properties can be configured:
 </table>
 
 ## Dependencies
-- [wunderlist](https://www.npmjs.com/package/wunderlist) (installed via `npm install`)
+- [anydo-api](https://www.npmjs.com/package/anydo-api) (installed via `npm install`)
 
 ## Known issues
-- User list will not propigate until second refresh
+- User list will not propagate until second refresh
 
 The MIT License (MIT)
 =====================
 
+Copyright © 2019 Mike Sandford
 Copyright © 2017 Dave Richer
 Copyright © 2016 Paul-Vincent Roll
 

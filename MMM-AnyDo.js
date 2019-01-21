@@ -2,13 +2,14 @@
 /* global Module */
 
 /* Magic Mirror
- * Module: MMM-Wunderlist-Enhanced
+ * Module: MMM-AnyDo
+ * Adapted By: Mike Sandford
  * Adapted By: Dave Richer <davericher@gmail.com>
  * Inspired by MMM-Wunderlist Paul-Vincent Roll http://paulvincentroll.com
  * MIT Licensed.
  */
 
-Module.register("MMM-Wunderlist-Enhanced", {
+Module.register("MMM-AnyDo", {
 
   defaults: {
     maximumEntries: 10,
@@ -108,7 +109,7 @@ Module.register("MMM-Wunderlist-Enhanced", {
     if (starred)
       return this.html.star;
 
-    if (!this.config.showBullets) 
+    if (!this.config.showBullets)
       return this.html.bullet_none;
 
     if (this.config.iconPosition == "right" || this.config.iconPosition == "inline_right")
@@ -132,7 +133,7 @@ Module.register("MMM-Wunderlist-Enhanced", {
       if (self.config.iconPosition == "left") {
         tds = bulletTd + tds;
       } else {
-        tds = tds + bulletTd; 
+        tds = tds + bulletTd;
       }
     }
 
@@ -163,7 +164,7 @@ Module.register("MMM-Wunderlist-Enhanced", {
           : '');
       }
     }
-    
+
     return self.html.row.format("", tds);
   },
 

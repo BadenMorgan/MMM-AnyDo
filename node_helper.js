@@ -9,7 +9,7 @@
 
 const NodeHelper = require("node_helper");
 const Fetcher = require("./fetcher.js");
-var WunderlistSDK = require('wunderlist');
+var anydo = require('anydo-api');
 var moment = require('moment');
 
 module.exports = NodeHelper.create({
@@ -20,7 +20,7 @@ module.exports = NodeHelper.create({
   },
 
   getLists: function(callback) {
-    this.WunderlistAPI.http.lists.all().done(function(lists) {
+    this.anydo.http.lists.all().done(function(lists) {
       callback(lists);
     }).fail(function(resp, code) {
       console.error('there was a Wunderlist problem', code);
@@ -28,7 +28,7 @@ module.exports = NodeHelper.create({
   },
 
   getUsers: function(callback) {
-    this.WunderlistAPI.http.users.all().done(function(users) {
+    this.anydo.http.users.all().done(function(users) {
       var ret = {};
       users.forEach(function(user) {
         ret[user.id] = user.name[0]
@@ -96,9 +96,9 @@ module.exports = NodeHelper.create({
         this.config = payload;
 
         // Create wunderlist API and fetch lists
-        this.WunderlistAPI = new WunderlistSDK({accessToken: self.config.accessToken, clientID: self.config.clientID});
+        this.anydo = new WunderlistSDK({accessToken: self.config.accessToken, clientID: self.config.clientID});
         // Wait Until initialized
-        this.WunderlistAPI.initialized.done(function() {
+        this.anydo.initialized.done(function() {
           // Get Initial List
           self.getLists(function(data) {
             self.lists = data;

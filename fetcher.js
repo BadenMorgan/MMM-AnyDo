@@ -4,10 +4,11 @@
  * Fetcher
  *
  * By Michael Teeuw http://michaelteeuw.nl edited for Wunderlist by Marcin Bielecki and Dave Richer
+ * Edited for AnyDo by Mike Sandford
  * MIT Licensed.
  */
 
-var WunderlistSDK = require('wunderlist');
+var anydo = require('ando-api');
 
 /* Fetcher
  * Responsible for requesting an update on the set interval and broadcasting the data.

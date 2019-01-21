@@ -1,26 +1,29 @@
 {
-  "name": "Magic-Mirror-Module-Wunderlist-Enhanced",
-  "description": "Wunderlist-Enhanced module for the Magic Mirror.",
+  "name": "Magic-Mirror-Module-AnyDo",
+  "description": "AnyDo module for the Magic Mirror.",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/funsocietyirc/MMM-Wunderlist-Enhanced.git"
+    "url": "git+https://github.com/MikeSandford/MMM-AnyDo.git"
   },
   "keywords": [
     "magic mirror",
     "smart mirror",
-    "wunderlist",
+    "any.do",
     "module"
   ],
-  "author": "Dave Richer",
-  "contributors": [ "Paul-Vincent Roll", "https://github.com/paviro/MMM-Wunderlist/graphs/contributors" ],
+  "author": "Mike Sandford",
+  "contributors": [
+    "Dave Richer", "https://github.com/davericher",
+    "Paul-Vincent Roll", "https://github.com/paviro/MMM-Wunderlist/graphs/contributors"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/funsocietyirc/MMM-Wunderlist-Enhanced/issues"
+    "url": "https://github.com/MikeSandford/MMM-AnyDo/issues"
   },
-  "homepage": "https://github.com/paviro/MMM-Wunderlist#readme",
+  "homepage": "https://github.com/MikeSandford/MMM-AnyDo#readme",
   "dependencies": {
     "moment": "latest",
-    "wunderlist": "latest"
+    "anydo-api": "latest"
   }
 }
