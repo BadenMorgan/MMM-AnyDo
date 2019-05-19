@@ -8,7 +8,7 @@
  * MIT Licensed.
  */
 
-var anydo = require('ando-api');
+var anydo = require('anydo-api');
 
 /* Fetcher
  * Responsible for requesting an update on the set interval and broadcasting the data.

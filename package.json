@@ -14,8 +14,10 @@
   ],
   "author": "Mike Sandford",
   "contributors": [
-    "Dave Richer", "https://github.com/davericher",
-    "Paul-Vincent Roll", "https://github.com/paviro/MMM-Wunderlist/graphs/contributors"
+    "Dave Richer",
+    "https://github.com/davericher",
+    "Paul-Vincent Roll",
+    "https://github.com/paviro/MMM-Wunderlist/graphs/contributors"
   ],
   "license": "MIT",
   "bugs": {
@@ -23,7 +25,8 @@
   },
   "homepage": "https://github.com/MikeSandford/MMM-AnyDo#readme",
   "dependencies": {
-    "moment": "latest",
-    "anydo-api": "latest"
+    "anydo-api": "latest",
+    "dotenv": "^6.2.0",
+    "moment": "latest"
   }
 }
